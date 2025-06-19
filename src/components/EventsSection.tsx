@@ -3,44 +3,68 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 const EventsSection = () => {
   const events = [
     {
-      date: "March 2025",
-      title: "Spring Hope Gala",
-      description: "Our biggest fundraising event of the year featuring dinner, entertainment, and inspiring stories from our community.",
-      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=200&fit=crop&crop=center",
-      type: "upcoming",
-      raised: "Goal: $150,000"
-    },
-    {
-      date: "February 2025",
-      title: "Community Care Drive",
-      description: "Collecting essential items for local families in need. Join us for a day of giving and community spirit.",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=200&fit=crop&crop=center",
-      type: "upcoming",
-      raised: "Goal: 5,000 items"
-    },
-    {
-      date: "December 2024",
-      title: "Holiday Hearts Festival",
-      description: "Brought joy to 300 families with holiday gifts, meals, and celebrations that created lasting memories.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=200&fit=crop&crop=center",
+      date: "July 2024",
+      title: "Basketball Shootout",
+      description: "A thrilling basketball shootout event at Underpass Toronto, bringing together players and fans.",
+      image: "/Images/event8.jpg",
       type: "past",
-      raised: "Raised: $75,000"
+      raised: "Raised: $4,000"
     },
     {
-      date: "October 2024",
-      title: "Autumn Action Marathon",
-      description: "100 runners participated in our charity marathon, raising funds while promoting health and wellness.",
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=200&fit=crop&crop=center",
+      date: "June 2024",
+      title: "Soccer Tournament",
+      description: "A day of friendly competition and community spirit on the soccer field.",
+      image: "/Images/event7.jpg",
       type: "past",
-      raised: "Raised: $45,000"
+      raised: "Raised: $5,000"
     },
     {
-      date: "August 2024",
-      title: "Summer Stories Picnic",
-      description: "A beautiful community gathering that celebrated our achievements and strengthened bonds between neighbors.",
-      image: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=400&h=200&fit=crop&crop=center",
+      date: "May 2024",
+      title: "Team Celebration",
+      description: "Celebrating our volunteers and their achievements after a successful event.",
+      image: "/Images/event3.jpg",
       type: "past",
-      raised: "Raised: $25,000"
+      raised: "Raised: $2,500"
+    },
+    {
+      date: "April 2024",
+      title: "Basketball Fundraiser",
+      description: "A basketball tournament to raise funds and bring the community together.",
+      image: "/Images/event2.jpg",
+      type: "past",
+      raised: "Raised: $3,000"
+    },
+    {
+      date: "March 2024",
+      title: "Spring Picnic",
+      description: "A picnic event with food, games, and fun for all ages.",
+      image: "/Images/event 6.jpg",
+      type: "past",
+      raised: "Raised: $1,800"
+    },
+    {
+      date: "February 2024",
+      title: "Community Gathering",
+      description: "Bringing people together for a day of food, conversation, and connection.",
+      image: "/Images/event 5.jpg",
+      type: "past",
+      raised: "Raised: $2,200"
+    },
+    {
+      date: "January 2024",
+      title: "Winter Soccer Match",
+      description: "A winter soccer match to kick off the new year with energy and excitement.",
+      image: "/Images/Event9.jpg",
+      type: "past",
+      raised: "Raised: $2,700"
+    },
+    {
+      date: "December 2023",
+      title: "Holiday Event",
+      description: "A festive event to celebrate the holidays and support our cause.",
+      image: "/Images/event 4.jpg",
+      type: "past",
+      raised: "Raised: $3,500"
     }
   ];
 
@@ -53,23 +77,25 @@ const EventsSection = () => {
             From heartwarming galas to community marathons, our events bring people together to create positive change and unforgettable memories.
           </p>
         </div>
-        <Carousel className="w-full max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'start', loop: true }}>
-          <CarouselPrevious />
-          <CarouselContent className="">
-            {events.map((event, index) => (
-              <CarouselItem key={index} className="pl-4 basis-1/2 transition-transform duration-500 ease-in-out hover:scale-105">
-                <div className={`rounded-2xl shadow-xl border-2 ${event.type === 'upcoming' ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100' : 'border-gray-200 bg-white'} p-6 flex flex-col items-center text-center animate-fade-in-up hover:shadow-2xl hover:border-primary-400`}>
-                  <img src={event.image} alt={event.title} className="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105" />
-                  <div className="mb-2 text-primary-600 font-bold text-sm">{event.date}</div>
-                  <h3 className="bubble-text-sm mb-2">{event.title}</h3>
-                  <p className="mb-3 text-gray-700 text-base">{event.description}</p>
-                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${event.type === 'upcoming' ? 'bg-primary-100 text-primary-700' : 'bg-gray-100 text-gray-700'}`}>{event.raised}</div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselNext />
-        </Carousel>
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-primary-200 scrollbar-track-primary-50">
+          <Carousel className="w-full max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'start', loop: true }}>
+            <CarouselPrevious />
+            <CarouselContent className="flex">
+              {events.map((event, index) => (
+                <CarouselItem key={index} className="pl-4 basis-1/2 min-w-[320px] max-w-[400px] animate-fade-in-up transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:border-primary-300">
+                  <div className={`rounded-2xl shadow-xl border-2 border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100 p-6 flex flex-col items-center text-center hover:shadow-2xl hover:border-primary-400 transition-all duration-300`}>
+                    <img src={event.image} alt={event.title} className="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105" />
+                    <div className="mb-2 text-primary-600 font-bold text-sm">{event.date}</div>
+                    <h3 className="bubble-text-sm mb-2">{event.title}</h3>
+                    <p className="mb-3 text-gray-700 text-base">{event.description}</p>
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${event.type === 'upcoming' ? 'bg-primary-100 text-primary-700' : 'bg-gray-100 text-gray-700'}`}>{event.raised}</div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselNext />
+          </Carousel>
+        </div>
       </div>
     </section>
   );

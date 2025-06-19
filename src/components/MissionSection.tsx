@@ -11,7 +11,7 @@ const MissionSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="card-hover scale-in transition-transform duration-500 ease-out animate-fade-in-up hover:scale-105 hover:shadow-lg hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
+          <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mb-6 flex items-center justify-center shadow-lg">
               <span className="text-3xl">💙</span>
             </div>
@@ -21,7 +21,7 @@ const MissionSection = () => {
             </p>
           </div>
 
-          <div className="card-hover scale-in transition-transform duration-500 ease-out animate-fade-in-up hover:scale-105 hover:shadow-lg hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
+          <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-sky-light to-primary-500 rounded-full mb-6 flex items-center justify-center shadow-lg">
               <span className="text-3xl">🌟</span>
             </div>
@@ -31,7 +31,7 @@ const MissionSection = () => {
             </p>
           </div>
 
-          <div className="card-hover scale-in transition-transform duration-500 ease-out animate-fade-in-up hover:scale-105 hover:shadow-lg hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
+          <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-primary-300 to-sky-medium rounded-full mb-6 flex items-center justify-center shadow-lg">
               <span className="text-3xl">🚀</span>
             </div>
@@ -44,31 +44,31 @@ const MissionSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4">
-            <div className="card-3d glass-card rounded-2xl overflow-hidden scale-in transition-transform duration-500 ease-out animate-fade-in-up hover:scale-105 hover:shadow-lg hover:border-primary-300 border-2 border-transparent">
+            <div className="card-3d glass-card rounded-2xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
-                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop&crop=center"
-                alt="Mountain summit representing reaching goals"
+                src="/Images/mission.jpg"
+                alt="Mission project photo 1"
                 className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105 hover:brightness-105"
               />
               <div className="p-4">
-                <p className="text-sm text-gray-600 font-medium">Reaching New Heights</p>
+                <p className="text-sm text-gray-600 font-medium">Mission Project 1</p>
               </div>
             </div>
 
-            <div className="card-3d glass-card rounded-2xl overflow-hidden scale-in transition-transform duration-500 ease-out animate-fade-in-up hover:scale-105 hover:shadow-lg hover:border-primary-300 border-2 border-transparent">
+            <div className="card-3d glass-card rounded-2xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
-                src="https://images.unsplash.com/photo-1551038247-3d9af20df552?w=400&h=300&fit=crop&crop=center"
-                alt="Beautiful architecture representing building community"
+                src="/Images/mission1.jpg"
+                alt="Mission project photo 2"
                 className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105 hover:brightness-105"
               />
               <div className="p-4">
-                <p className="text-sm text-gray-600 font-medium">Building Together</p>
+                <p className="text-sm text-gray-600 font-medium">Mission Project 2</p>
               </div>
             </div>
           </div>
 
           <div className="space-y-6">
-            <div className="card-hover scale-in bg-white/90 rounded-2xl p-6 shadow-md border-2 border-transparent hover:border-primary-300 animate-fade-in-up">
+            <div className="card-hover scale-in bg-white/90 rounded-2xl p-6 shadow-md border-2 border-transparent hover:border-primary-300 animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl">
               <h3 className="bubble-text-sm text-primary-600 mb-4">2024 Goals</h3>
               <ul className="space-y-3 text-section text-base">
                 <li className="flex items-start">
@@ -90,7 +90,7 @@ const MissionSection = () => {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-r from-primary-500 to-sky-medium p-6 rounded-2xl text-white card-3d scale-in animate-fade-in-up shadow-lg">
+            <div className="bg-gradient-to-r from-primary-500 to-sky-medium p-6 rounded-2xl text-white card-3d scale-in animate-fade-in-up shadow-lg transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl">
               <h4 className="font-bold text-lg mb-2">Impact This Year</h4>
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
