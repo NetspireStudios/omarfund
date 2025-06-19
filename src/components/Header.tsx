@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogClose
+} from './ui/dialog';
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const [amount, setAmount] = useState<number | ''>('');
+  const [success, setSuccess] = useState(false);
+
+  const handleOpen = (preset?: number) => {
+    setAmount(preset || '');
+    setSuccess(false);
+    setOpen(true);
+  };
+
+  const handleDonate = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(true);
+    setTimeout(() => setOpen(false), 1500);
+  };
+
   return (
     <header className="sticky top-0 z-30 w-full bg-white/80 backdrop-blur border-b border-primary-100 shadow-sm">
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
@@ -16,10 +41,67 @@ const Header = () => {
           <a href="#events" className="hover:text-primary-500 transition-colors">Events</a>
           <a href="#donate" className="hover:text-primary-500 transition-colors">Donate</a>
         </nav>
-        {/* Donate Button */}
-        <a href="#donate" className="ml-4 inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white font-semibold shadow hover:scale-105 hover:shadow-lg transition-all duration-200">
-          Donate
-        </a>
+        {/* Donate Button with Dialog */}
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <button className="ml-4 inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white font-semibold shadow hover:scale-105 hover:shadow-lg transition-all duration-200">
+              Donate
+            </button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="bubble-text-md gradient-text mb-2">Complete Your Donation</DialogTitle>
+            </DialogHeader>
+            {success ? (
+              <div className="text-center py-8">
+                <div className="text-4xl mb-4">🎉</div>
+                <div className="text-lg font-bold mb-2">Thank you for your generosity!</div>
+                <div className="text-gray-600">Your support makes a real difference.</div>
+              </div>
+            ) : (
+              <form onSubmit={handleDonate} className="space-y-6">
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  {[25, 50, 100, 250].map((preset) => (
+                    <button
+                      key={preset}
+                      type="button"
+                      onClick={() => setAmount(preset)}
+                      className={`bg-primary-100 text-primary-700 font-bold py-3 px-4 rounded-lg hover:bg-primary-200 transition-all duration-300 w-full ${amount === preset ? 'ring-2 ring-primary-500' : ''}`}
+                    >
+                      ${preset}
+                    </button>
+                  ))}
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Donation Amount</label>
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg font-bold text-primary-600">$</span>
+                    <input
+                      type="number"
+                      min={1}
+                      required
+                      className="w-32 px-3 py-2 rounded-lg border border-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-lg text-primary-700 font-bold bg-white"
+                      value={amount}
+                      onChange={e => setAmount(Number(e.target.value))}
+                      placeholder="Amount"
+                    />
+                  </div>
+                </div>
+                <DialogFooter>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-primary-500 to-sky-400 text-white font-bold py-3 px-6 rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300"
+                  >
+                    Donate Now
+                  </button>
+                  <DialogClose asChild>
+                    <button type="button" className="mt-2 text-primary-500 underline text-sm">Cancel</button>
+                  </DialogClose>
+                </DialogFooter>
+              </form>
+            )}
+          </DialogContent>
+        </Dialog>
         {/* Mobile Nav Hamburger */}
         <button className="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary-400 group">
           <span className="sr-only">Open navigation</span>

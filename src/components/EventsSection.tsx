@@ -53,13 +53,13 @@ const EventsSection = () => {
             From heartwarming galas to community marathons, our events bring people together to create positive change and unforgettable memories.
           </p>
         </div>
-        <Carousel className="w-full max-w-3xl mx-auto">
+        <Carousel className="w-full max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'start', loop: true }}>
           <CarouselPrevious />
-          <CarouselContent>
+          <CarouselContent className="">
             {events.map((event, index) => (
-              <CarouselItem key={index} className="px-2">
-                <div className={`rounded-2xl shadow-lg border-2 ${event.type === 'upcoming' ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100' : 'border-gray-200 bg-white'} p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105`}>
-                  <img src={event.image} alt={event.title} className="w-full h-40 object-cover rounded-xl mb-4" />
+              <CarouselItem key={index} className="pl-4 basis-1/2 transition-transform duration-500 ease-in-out hover:scale-105">
+                <div className={`rounded-2xl shadow-xl border-2 ${event.type === 'upcoming' ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100' : 'border-gray-200 bg-white'} p-6 flex flex-col items-center text-center animate-fade-in-up hover:shadow-2xl hover:border-primary-400`}>
+                  <img src={event.image} alt={event.title} className="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105" />
                   <div className="mb-2 text-primary-600 font-bold text-sm">{event.date}</div>
                   <h3 className="bubble-text-sm mb-2">{event.title}</h3>
                   <p className="mb-3 text-gray-700 text-base">{event.description}</p>
