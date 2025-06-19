@@ -2,35 +2,8 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const HeroSection = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReducedMotion && titleRef.current && subtitleRef.current && ctaRef.current) {
-      const tl = gsap.timeline();
-      tl.fromTo(titleRef.current,
-        { opacity: 0, y: 80, scale: 0.92 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'back.out(1.7)' }
-      )
-      .fromTo(subtitleRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' },
-        '-=0.7'
-      )
-      .fromTo(ctaRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-        '-=0.5'
-      );
-    }
-  }, []);
-
   return (
     <section
-      ref={heroRef}
       className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-sky-50 via-white to-blue-100 overflow-hidden"
     >
       {/* Overlay */}
@@ -45,19 +18,16 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container text-center z-10 relative py-16 md:py-24">
         <h1
-          ref={titleRef}
           className="bubble-text-lg gradient-text mb-4 md:mb-6 px-2 md:px-4 animate-gradient-x transition-all duration-300 hover:scale-105 hover:drop-shadow-2xl sparkle"
         >
           The Omar Fund
         </h1>
         <p
-          ref={subtitleRef}
           className="text-base sm:text-lg md:text-2xl text-gray-700 mb-6 md:mb-10 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 md:px-4 font-medium transition-colors duration-300 hover:text-primary-600"
         >
           Making dreams come true, one story at a time. Join us in creating positive change in our community through the power of kindness and generosity.
         </p>
         <div
-          ref={ctaRef}
           className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-2 md:px-4"
         >
           <a href="#donate" className="relative inline-flex items-center justify-center px-6 md:px-8 py-3 text-base md:text-lg font-semibold rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 group overflow-hidden border-4 border-transparent hover:border-primary-300 w-full sm:w-auto">

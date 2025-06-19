@@ -13,6 +13,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [amount, setAmount] = useState<number | ''>('');
   const [success, setSuccess] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleOpen = (preset?: number) => {
     setAmount(preset || '');
@@ -103,13 +104,37 @@ const Header = () => {
           </DialogContent>
         </Dialog>
         {/* Mobile Nav Hamburger */}
-        <button className="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary-400 group">
+        <button
+          className="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary-400 group"
+          onClick={() => setMobileMenuOpen(true)}
+        >
           <span className="sr-only">Open navigation</span>
           <svg className="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-start justify-end md:hidden" onClick={() => setMobileMenuOpen(false)}>
+          <nav
+            className="bg-white w-3/4 max-w-xs h-full shadow-2xl flex flex-col p-8 gap-8 animate-fade-in-up"
+            onClick={e => e.stopPropagation()}
+          >
+            <button
+              className="self-end mb-8 text-3xl text-primary-600 focus:outline-none"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              ×
+            </button>
+            <a href="#about" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
+            <a href="#mission" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Mission</a>
+            <a href="#events" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Events</a>
+            <a href="#donate" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Donate</a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
