@@ -65,9 +65,10 @@ const HeroSection = () => {
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-white opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
           </a>
-          <a href="#mission" className="inline-flex items-center px-6 md:px-7 py-3 text-base md:text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden w-full sm:w-auto">
-            Learn Our Mission
-            <span className="ml-2 text-xl">→</span>
+          <a href="#mission" className="inline-flex items-center justify-center text-center px-6 md:px-7 py-3 text-base md:text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden w-full sm:w-auto">
+            <span className="flex items-center justify-center w-full">
+              Learn Our Mission <span className="ml-2 text-xl">→</span>
+            </span>
             <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-primary-200 opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
           </a>
         </div>
