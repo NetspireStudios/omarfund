@@ -60,16 +60,16 @@ const HeroSection = () => {
           ref={ctaRef}
           className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-2 md:px-4"
         >
-          <button className="relative inline-flex items-center justify-center px-6 md:px-8 py-3 text-base md:text-lg font-semibold rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 group overflow-hidden border-4 border-transparent hover:border-primary-300 w-full sm:w-auto">
+          <a href="#donate" className="relative inline-flex items-center justify-center px-6 md:px-8 py-3 text-base md:text-lg font-semibold rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 group overflow-hidden border-4 border-transparent hover:border-primary-300 w-full sm:w-auto">
             <span className="relative z-10">Start Your Story</span>
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-white opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
-          </button>
-          <button className="inline-flex items-center px-6 md:px-7 py-3 text-base md:text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden w-full sm:w-auto">
+          </a>
+          <a href="#mission" className="inline-flex items-center px-6 md:px-7 py-3 text-base md:text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden w-full sm:w-auto">
             Learn Our Mission
             <span className="ml-2 text-xl">→</span>
             <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-primary-200 opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
-          </button>
+          </a>
         </div>
       </div>
     </section>
