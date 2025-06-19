@@ -30,13 +30,13 @@ const DonateSection = () => {
     <section className="section-padding bg-gradient-to-br from-primary-600 via-primary-500 to-sky-medium text-white fade-in-section">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="bubble-text-md gradient-text mb-6 sparkle">Support the Omar Fund</h2>
+          <h2 className="bubble-text-md mb-6 text-white animate-fade-in-up sparkle" style={{textShadow: '0 2px 16px rgba(0,0,0,0.25)'}}>Support the Omar Fund</h2>
           <p className="text-xl leading-relaxed max-w-2xl mx-auto opacity-90">
             Your generosity fuels our mission. Every donation, no matter the size, helps us create more heart stories and transform lives in our community.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
-          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl card-3d w-full max-w-md text-center mb-8 md:mb-0">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center justify-center">
+          <div className="bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl card-3d w-full max-w-md text-center mb-6 md:mb-0">
             <h3 className="bubble-text-sm text-white mb-4">Where Your Money Goes</h3>
             <div className="space-y-4 text-left">
               <div className="flex justify-between items-center">
@@ -71,7 +71,7 @@ const DonateSection = () => {
               </ul>
             </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl card-3d w-full max-w-md text-center">
+          <div className="bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl card-3d w-full max-w-md text-center">
             <h3 className="bubble-text-sm text-white mb-6">Donate Now</h3>
             <Dialog open={open} onOpenChange={setOpen}>
               <div className="grid grid-cols-2 gap-4 mb-6">

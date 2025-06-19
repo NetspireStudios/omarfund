@@ -78,17 +78,17 @@ const EventsSection = () => {
           </p>
         </div>
         <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-primary-200 scrollbar-track-primary-50">
-          <Carousel className="w-full max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'start', loop: true }}>
+          <Carousel className="w-full max-w-full sm:max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'start', loop: true }}>
             <CarouselPrevious />
             <CarouselContent className="flex">
               {events.map((event, index) => (
-                <CarouselItem key={index} className="pl-4 basis-1/2 min-w-[320px] max-w-[400px] animate-fade-in-up transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:border-primary-300">
-                  <div className={`rounded-2xl shadow-xl border-2 border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100 p-6 flex flex-col items-center text-center hover:shadow-2xl hover:border-primary-400 transition-all duration-300`}>
-                    <img src={event.image} alt={event.title} className="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105" />
-                    <div className="mb-2 text-primary-600 font-bold text-sm">{event.date}</div>
-                    <h3 className="bubble-text-sm mb-2">{event.title}</h3>
-                    <p className="mb-3 text-gray-700 text-base">{event.description}</p>
-                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${event.type === 'upcoming' ? 'bg-primary-100 text-primary-700' : 'bg-gray-100 text-gray-700'}`}>{event.raised}</div>
+                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 min-w-[90vw] sm:min-w-[320px] max-w-full sm:max-w-[400px] animate-fade-in-up transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:border-primary-300">
+                  <div className={`rounded-2xl shadow-xl border-2 border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100 p-4 sm:p-6 flex flex-col items-center text-center hover:shadow-2xl hover:border-primary-400 transition-all duration-300`}>
+                    <img src={event.image} alt={event.title} className="w-full h-32 sm:h-40 object-cover rounded-xl mb-3 sm:mb-4 transition-transform duration-300 hover:scale-105" />
+                    <div className="mb-1 sm:mb-2 text-primary-600 font-bold text-xs sm:text-sm">{event.date}</div>
+                    <h3 className="bubble-text-sm mb-1 sm:mb-2">{event.title}</h3>
+                    <p className="mb-2 sm:mb-3 text-gray-700 text-sm sm:text-base">{event.description}</p>
+                    <div className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs font-semibold ${event.type === 'upcoming' ? 'bg-primary-100 text-primary-700' : 'bg-gray-100 text-gray-700'}`}>{event.raised}</div>
                   </div>
                 </CarouselItem>
               ))}

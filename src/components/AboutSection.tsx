@@ -10,7 +10,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
             <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <h3 className="bubble-text-sm text-primary-600 mb-4 transition-colors duration-300 hover:text-primary-800">Our Beginning</h3>
@@ -31,7 +31,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="card-3d rounded-xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
                 src="/Images/Omar1.webp"
@@ -54,7 +54,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="col-span-2 card-3d rounded-xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
+            <div className="col-span-1 sm:col-span-2 card-3d rounded-xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
                 src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=500&h=200&fit=crop&crop=center"
                 alt="Inspiring starry night representing hope and dreams"

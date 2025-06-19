@@ -43,29 +43,29 @@ const HeroSection = () => {
         <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-gradient-to-br from-primary-300 to-sky-100 rounded-full blur-2xl opacity-20 animate-pulse-slow transition-transform duration-500 hover:scale-110 hover:shadow-xl" />
       </div>
       {/* Content */}
-      <div className="container text-center z-10 relative py-24">
+      <div className="container text-center z-10 relative py-16 md:py-24">
         <h1
           ref={titleRef}
-          className="bubble-text-lg gradient-text mb-6 px-4 animate-gradient-x transition-all duration-300 hover:scale-105 hover:drop-shadow-2xl sparkle"
+          className="bubble-text-lg gradient-text mb-4 md:mb-6 px-2 md:px-4 animate-gradient-x transition-all duration-300 hover:scale-105 hover:drop-shadow-2xl sparkle"
         >
           The Omar Fund
         </h1>
         <p
           ref={subtitleRef}
-          className="text-lg md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed px-4 font-medium transition-colors duration-300 hover:text-primary-600"
+          className="text-base sm:text-lg md:text-2xl text-gray-700 mb-6 md:mb-10 max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 md:px-4 font-medium transition-colors duration-300 hover:text-primary-600"
         >
           Making dreams come true, one story at a time. Join us in creating positive change in our community through the power of kindness and generosity.
         </p>
         <div
           ref={ctaRef}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
+          className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-2 md:px-4"
         >
-          <button className="relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 group overflow-hidden border-4 border-transparent hover:border-primary-300">
+          <button className="relative inline-flex items-center justify-center px-6 md:px-8 py-3 text-base md:text-lg font-semibold rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 group overflow-hidden border-4 border-transparent hover:border-primary-300 w-full sm:w-auto">
             <span className="relative z-10">Start Your Story</span>
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-white opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
           </button>
-          <button className="inline-flex items-center px-7 py-3 text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden">
+          <button className="inline-flex items-center px-6 md:px-7 py-3 text-base md:text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden w-full sm:w-auto">
             Learn Our Mission
             <span className="ml-2 text-xl">→</span>
             <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-primary-200 opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />

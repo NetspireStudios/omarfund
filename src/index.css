@@ -144,6 +144,7 @@
     border: 1px solid rgba(74, 144, 226, 0.1);
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .card-3d:hover {
@@ -333,5 +334,42 @@
   @keyframes sparkleTwinkle {
     0% { opacity: 0.7; transform: scale(1) rotate(0deg); }
     100% { opacity: 1; transform: scale(1.2) rotate(20deg); }
+  }
+
+  /* Unreal 3D Card Effect */
+  .unreal-3d {
+    perspective: 900px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s;
+    box-shadow: 0 4px 16px 0 rgba(31,38,135,0.10), 0 0 12px 2px #0ea5e933;
+    will-change: transform, box-shadow;
+  }
+  .unreal-3d:hover {
+    transform: rotateY(6deg) rotateX(2deg) scale(1.03);
+    box-shadow: 0 8px 32px 0 #38bdf844, 0 0 24px 6px #87ceeb33;
+    animation: none;
+    filter: none;
+  }
+
+  /* Psychedelic Neon Glow */
+  .psy-glow {
+    box-shadow: 0 0 8px 2px #0ea5e955, 0 0 16px 4px #38bdf822;
+    border: 1.5px solid #bae6fd;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  .psy-glow:hover {
+    box-shadow: 0 0 16px 4px #87ceeb55, 0 0 32px 8px #fff2;
+    border-color: #7dd3fc;
+  }
+
+  /* Wobble Animation */
+  @keyframes wobble {
+    0% { transform: none; }
+    15% { transform: rotateY(8deg) rotateX(4deg) scale(1.04) skewY(1deg); }
+    30% { transform: rotateY(-8deg) rotateX(-4deg) scale(1.06) skewY(-1deg); }
+    45% { transform: rotateY(6deg) rotateX(3deg) scale(1.08) skewY(1deg); }
+    60% { transform: rotateY(-6deg) rotateX(-3deg) scale(1.07) skewY(-1deg); }
+    75% { transform: rotateY(4deg) rotateX(2deg) scale(1.06) skewY(0.5deg); }
+    100% { transform: rotateY(16deg) rotateX(8deg) scale(1.08) skewY(2deg); }
   }
 }

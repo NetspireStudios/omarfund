@@ -1,9 +1,8 @@
-
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white section-padding fade-in-section">
       <div className="container">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           <div>
             <h3 className="bubble-text-sm text-white mb-6">Sky Blue Heart Stories</h3>
             <p className="text-gray-300 leading-relaxed mb-4">
@@ -79,8 +78,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-gray-700 pt-6 md:pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
             <p className="text-gray-400 text-sm">
               © 2024 Sky Blue Heart Stories. All rights reserved.
             </p>

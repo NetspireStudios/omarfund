@@ -10,9 +10,9 @@ const MissionSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mb-6 flex items-center justify-center shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-16">
+          <div className="card-hover unreal-3d psy-glow scale-in animate-fade-in-up transition-transform duration-500 ease-out bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mb-6 flex items-center justify-center shadow-lg shimmer">
               <span className="text-3xl">💙</span>
             </div>
             <h3 className="bubble-text-sm text-primary-600 mb-3">Empower Dreams</h3>
@@ -21,8 +21,8 @@ const MissionSection = () => {
             </p>
           </div>
 
-          <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-sky-light to-primary-500 rounded-full mb-6 flex items-center justify-center shadow-lg">
+          <div className="card-hover unreal-3d psy-glow scale-in animate-fade-in-up transition-transform duration-500 ease-out bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-sky-light to-primary-500 rounded-full mb-6 flex items-center justify-center shadow-lg shimmer">
               <span className="text-3xl">🌟</span>
             </div>
             <h3 className="bubble-text-sm text-primary-600 mb-3">Build Community</h3>
@@ -31,8 +31,8 @@ const MissionSection = () => {
             </p>
           </div>
 
-          <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-300 to-sky-medium rounded-full mb-6 flex items-center justify-center shadow-lg">
+          <div className="card-hover unreal-3d psy-glow scale-in animate-fade-in-up transition-transform duration-500 ease-out bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-300 to-sky-medium rounded-full mb-6 flex items-center justify-center shadow-lg shimmer">
               <span className="text-3xl">🚀</span>
             </div>
             <h3 className="bubble-text-sm text-primary-600 mb-3">Create Impact</h3>
@@ -42,8 +42,8 @@ const MissionSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="card-3d glass-card rounded-2xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
                 src="/Images/mission.jpg"
