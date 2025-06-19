@@ -19,6 +19,11 @@ const AboutSection = () => {
                 We believe in the power of small acts of kindness to create ripples of positive change 
                 that touch countless lives.
               </p>
+              <img 
+                src="/Images/Omar1.webp"
+                alt="Omar at event"
+                className="w-full h-48 object-cover rounded-xl mt-4 transition-transform duration-300 hover:scale-110 hover:brightness-110 block lg:hidden"
+              />
             </div>
 
             <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
@@ -28,10 +33,15 @@ const AboutSection = () => {
                 by our shared belief that together, we can make the world a little brighter, 
                 one story at a time.
               </p>
+              <img 
+                src="/Images/omar2.webp"
+                alt="Omar smiling"
+                className="w-full h-48 object-cover rounded-xl mt-4 transition-transform duration-300 hover:scale-110 hover:brightness-110 block lg:hidden"
+              />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="hidden lg:grid grid-cols-2 gap-4">
             <div className="card-3d rounded-xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
                 src="/Images/Omar1.webp"
@@ -51,17 +61,6 @@ const AboutSection = () => {
               />
               <div className="p-4">
                 <p className="text-sm text-gray-600 font-medium transition-colors duration-300 hover:text-primary-600">Omar Smiling</p>
-              </div>
-            </div>
-
-            <div className="col-span-1 sm:col-span-2 card-3d rounded-xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
-              <img 
-                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=500&h=200&fit=crop&crop=center"
-                alt="Inspiring starry night representing hope and dreams"
-                className="w-full h-32 object-cover transition-transform duration-500 hover:scale-110 hover:brightness-110 hover:shimmer"
-              />
-              <div className="p-4">
-                <p className="text-sm text-gray-600 font-medium transition-colors duration-300 hover:text-primary-600">Hope Under the Stars</p>
               </div>
             </div>
           </div>
