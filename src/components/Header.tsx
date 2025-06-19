@@ -118,20 +118,24 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-start justify-end md:hidden" onClick={() => setMobileMenuOpen(false)}>
           <nav
-            className="w-3/4 max-w-xs h-full shadow-xl flex flex-col p-8 gap-8 animate-fade-in-up bg-white/90 backdrop-blur-lg rounded-l-2xl border-l-2 border-primary-100 ring-1 ring-primary-200"
+            className="w-3/4 max-w-xs h-full shadow-xl flex flex-col p-0 animate-fade-in-up bg-white rounded-l-2xl border-l-2 border-primary-100 ring-1 ring-primary-200"
             onClick={e => e.stopPropagation()}
           >
-            <button
-              className="self-end mb-8 text-3xl text-primary-600 focus:outline-none"
-              onClick={() => setMobileMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              ×
-            </button>
-            <a href="#about" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#mission" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Mission</a>
-            <a href="#events" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Events</a>
-            <a href="#donate" className="text-lg font-semibold text-primary-700 hover:text-primary-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Donate</a>
+            <div className="p-8 pb-0 flex justify-end">
+              <button
+                className="mb-8 text-3xl text-primary-600 focus:outline-none hover:text-primary-700 transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                ×
+              </button>
+            </div>
+            <div className="flex flex-col divide-y divide-primary-100">
+              <a href="#about" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <a href="#mission" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>Mission</a>
+              <a href="#events" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>Events</a>
+              <a href="#donate" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>Donate</a>
+            </div>
           </nav>
         </div>
       )}
