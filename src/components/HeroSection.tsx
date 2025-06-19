@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
@@ -10,84 +9,67 @@ const HeroSection = () => {
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
     if (!prefersReducedMotion && titleRef.current && subtitleRef.current && ctaRef.current) {
       const tl = gsap.timeline();
-      
       tl.fromTo(titleRef.current,
-        { opacity: 0, y: 100, scale: 0.8 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'back.out(1.7)' }
+        { opacity: 0, y: 80, scale: 0.92 },
+        { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'back.out(1.7)' }
       )
       .fromTo(subtitleRef.current,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' },
-        '-=0.6'
+        '-=0.7'
       )
       .fromTo(ctaRef.current,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-        '-=0.4'
+        '-=0.5'
       );
     }
   }, []);
 
   return (
-    <section 
+    <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-sky-50 via-white to-blue-100 overflow-hidden"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="parallax-bg absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-primary-300 to-primary-500 rounded-full blur-3xl float"></div>
-        <div className="parallax-bg absolute top-32 right-16 w-48 h-48 bg-gradient-to-br from-sky-light to-primary-400 rounded-full blur-2xl float-delayed"></div>
-        <div className="parallax-bg absolute bottom-20 left-1/4 w-72 h-72 bg-gradient-to-br from-primary-200 to-primary-400 rounded-full blur-3xl float"></div>
-        <div className="parallax-bg absolute bottom-32 right-1/3 w-56 h-56 bg-gradient-to-br from-primary-300 to-sky-light rounded-full blur-2xl float-delayed"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-100/80 via-white/60 to-sky-200/80 z-0" />
+      {/* Dynamic Background Circles */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-primary-300 to-primary-500 rounded-full blur-3xl opacity-30 animate-pulse-slow transition-transform duration-500 hover:scale-105 hover:shadow-2xl" />
+        <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-br from-sky-200 to-primary-400 rounded-full blur-2xl opacity-20 animate-float transition-transform duration-500 hover:scale-110 hover:shadow-xl" />
+        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-gradient-to-br from-primary-200 to-primary-400 rounded-full blur-3xl opacity-30 animate-float-delayed transition-transform duration-500 hover:scale-105 hover:shadow-2xl" />
+        <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-gradient-to-br from-primary-300 to-sky-100 rounded-full blur-2xl opacity-20 animate-pulse-slow transition-transform duration-500 hover:scale-110 hover:shadow-xl" />
       </div>
-
-      {/* Floating Shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/6 w-8 h-8 bg-primary-400 rounded-full opacity-60 float"></div>
-        <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-sky-light rounded-full opacity-40 float-delayed"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-10 h-10 bg-primary-300 rounded-full opacity-50 float"></div>
-        <div className="absolute bottom-1/3 right-1/6 w-4 h-4 bg-primary-500 rounded-full opacity-70 float-delayed"></div>
-      </div>
-
-      <div className="container text-center z-10 relative">
-        <h1 
+      {/* Content */}
+      <div className="container text-center z-10 relative py-24">
+        <h1
           ref={titleRef}
-          className="bubble-text-lg gradient-text mb-6 px-4"
+          className="bubble-text-lg gradient-text mb-6 px-4 animate-gradient-x transition-all duration-300 hover:scale-105 hover:drop-shadow-2xl sparkle"
         >
-          Sky Blue Heart Stories
+          The Omar Fund
         </h1>
-        
-        <p 
+        <p
           ref={subtitleRef}
-          className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed px-4"
+          className="text-lg md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed px-4 font-medium transition-colors duration-300 hover:text-primary-600"
         >
-          Making dreams come true, one story at a time. Join us in creating positive change 
-          in our community through the power of kindness and generosity.
+          Making dreams come true, one story at a time. Join us in creating positive change in our community through the power of kindness and generosity.
         </p>
-        
-        <div 
+        <div
           ref={ctaRef}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
         >
-          <button className="btn-primary group relative overflow-hidden">
+          <button className="relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 group overflow-hidden border-4 border-transparent hover:border-primary-300">
             <span className="relative z-10">Start Your Story</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-sky-medium transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-white opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
           </button>
-          
-          <button className="btn-secondary group">
+          <button className="inline-flex items-center px-7 py-3 text-lg font-semibold rounded-full border-2 border-primary-400 text-primary-600 bg-white/80 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 hover:scale-105 hover:border-primary-600 shadow group relative overflow-hidden">
             Learn Our Mission
-            <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+            <span className="ml-2 text-xl">→</span>
+            <span className="absolute left-0 top-0 w-full h-full rounded-full border-2 border-primary-200 opacity-0 group-hover:opacity-60 animate-pulse pointer-events-none" />
           </button>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary-400 rounded-full mt-2 animate-pulse"></div>
-          </div>
         </div>
       </div>
     </section>

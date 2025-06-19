@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,6 +9,7 @@ import DonateSection from '../components/DonateSection';
 import Footer from '../components/Footer';
 import StickyDonateButton from '../components/StickyDonateButton';
 import FloatingElements from '../components/FloatingElements';
+import Header from '../components/Header';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -73,6 +73,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
+      <Header />
       <FloatingElements />
       <HeroSection />
       <AboutSection />

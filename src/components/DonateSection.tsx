@@ -1,55 +1,69 @@
+import { useState } from 'react';
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogClose
+} from './ui/dialog';
 
 const DonateSection = () => {
-  const handleDonate = (amount: number) => {
-    // This will be connected to Stripe - for now, we'll log the amount
-    console.log(`Donate button clicked: $${amount}`);
-    // In a real implementation, this would redirect to Stripe Checkout
-    alert(`Thank you for wanting to donate $${amount}! Stripe integration details are in the documentation.`);
+  const [open, setOpen] = useState(false);
+  const [amount, setAmount] = useState<number | ''>('');
+  const [custom, setCustom] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleOpen = (preset?: number) => {
+    setCustom(!preset);
+    setAmount(preset || '');
+    setSuccess(false);
+    setOpen(true);
+  };
+
+  const handleDonate = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(true);
+    setTimeout(() => setOpen(false), 1500);
   };
 
   return (
     <section className="section-padding bg-gradient-to-br from-primary-600 via-primary-500 to-sky-medium text-white fade-in-section">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="bubble-text-md text-white mb-6">Make a Difference Today</h2>
-          <p className="text-xl leading-relaxed max-w-3xl mx-auto opacity-90">
-            Your generosity fuels our mission. Every donation, no matter the size, 
-            helps us create more heart stories and transform lives in our community.
+        <div className="text-center mb-12">
+          <h2 className="bubble-text-md gradient-text mb-6 sparkle">Support the Omar Fund</h2>
+          <p className="text-xl leading-relaxed max-w-2xl mx-auto opacity-90">
+            Your generosity fuels our mission. Every donation, no matter the size, helps us create more heart stories and transform lives in our community.
           </p>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl card-3d scale-in">
-              <h3 className="bubble-text-sm text-white mb-4">Where Your Money Goes</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span>Direct Community Aid</span>
-                  <span className="font-bold">65%</span>
-                </div>
-                <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
-                  <div className="bg-white h-2 rounded-full" style={{ width: '65%' }}></div>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <span>Program Development</span>
-                  <span className="font-bold">25%</span>
-                </div>
-                <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
-                  <div className="bg-white h-2 rounded-full" style={{ width: '25%' }}></div>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <span>Operations</span>
-                  <span className="font-bold">10%</span>
-                </div>
-                <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
-                  <div className="bg-white h-2 rounded-full" style={{ width: '10%' }}></div>
-                </div>
+        <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
+          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl card-3d w-full max-w-md text-center mb-8 md:mb-0">
+            <h3 className="bubble-text-sm text-white mb-4">Where Your Money Goes</h3>
+            <div className="space-y-4 text-left">
+              <div className="flex justify-between items-center">
+                <span>Direct Community Aid</span>
+                <span className="font-bold">65%</span>
+              </div>
+              <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
+                <div className="bg-white h-2 rounded-full" style={{ width: '65%' }}></div>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>Program Development</span>
+                <span className="font-bold">25%</span>
+              </div>
+              <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
+                <div className="bg-white h-2 rounded-full" style={{ width: '25%' }}></div>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>Operations</span>
+                <span className="font-bold">10%</span>
+              </div>
+              <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
+                <div className="bg-white h-2 rounded-full" style={{ width: '10%' }}></div>
               </div>
             </div>
-
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl card-3d scale-in">
+            <div className="mt-8">
               <h4 className="font-bold text-lg mb-3">Impact Examples</h4>
               <ul className="space-y-2 text-sm">
                 <li>• $25 provides a family meal for a week</li>
@@ -59,29 +73,28 @@ const DonateSection = () => {
               </ul>
             </div>
           </div>
-
-          <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-xl card-3d scale-in">
-            <h3 className="bubble-text-sm text-white mb-6 text-center">Choose Your Impact</h3>
-            
+          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl card-3d w-full max-w-md text-center">
+            <h3 className="bubble-text-sm text-white mb-6">Donate Now</h3>
             <div className="grid grid-cols-2 gap-4 mb-6">
-              {[25, 50, 100, 250].map((amount) => (
-                <button
-                  key={amount}
-                  onClick={() => handleDonate(amount)}
-                  className="bg-white text-primary-600 font-bold py-4 px-6 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                >
-                  ${amount}
-                </button>
+              {[25, 50, 100, 250].map((preset) => (
+                <DialogTrigger asChild key={preset}>
+                  <button
+                    onClick={() => handleOpen(preset)}
+                    className="bg-white text-primary-600 font-bold py-4 px-6 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full"
+                  >
+                    ${preset}
+                  </button>
+                </DialogTrigger>
               ))}
             </div>
-
-            <button
-              onClick={() => handleDonate(0)} // Custom amount
-              className="w-full bg-transparent border-2 border-white text-white font-bold py-4 px-6 rounded-lg hover:bg-white hover:text-primary-600 transition-all duration-300 mb-6"
-            >
-              Custom Amount
-            </button>
-
+            <DialogTrigger asChild>
+              <button
+                onClick={() => handleOpen()}
+                className="w-full bg-transparent border-2 border-white text-white font-bold py-4 px-6 rounded-lg hover:bg-white hover:text-primary-600 transition-all duration-300 mb-6"
+              >
+                Custom Amount
+              </button>
+            </DialogTrigger>
             <div className="text-center">
               <p className="text-sm opacity-80 mb-4">
                 Your donation is secure and tax-deductible
@@ -94,6 +107,49 @@ const DonateSection = () => {
             </div>
           </div>
         </div>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="bubble-text-md gradient-text mb-2">Complete Your Donation</DialogTitle>
+            </DialogHeader>
+            {success ? (
+              <div className="text-center py-8">
+                <div className="text-4xl mb-4">🎉</div>
+                <div className="text-lg font-bold mb-2">Thank you for your generosity!</div>
+                <div className="text-gray-600">Your support makes a real difference.</div>
+              </div>
+            ) : (
+              <form onSubmit={handleDonate} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Donation Amount</label>
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg font-bold text-primary-600">$</span>
+                    <input
+                      type="number"
+                      min={1}
+                      required
+                      className="w-32 px-3 py-2 rounded-lg border border-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-lg text-primary-700 font-bold bg-white"
+                      value={amount}
+                      onChange={e => setAmount(Number(e.target.value))}
+                      placeholder="Amount"
+                    />
+                  </div>
+                </div>
+                <DialogFooter>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-primary-500 to-sky-400 text-white font-bold py-3 px-6 rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300"
+                  >
+                    Donate Now
+                  </button>
+                  <DialogClose asChild>
+                    <button type="button" className="mt-2 text-primary-500 underline text-sm">Cancel</button>
+                  </DialogClose>
+                </DialogFooter>
+              </form>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
