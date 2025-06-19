@@ -118,7 +118,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-start justify-end md:hidden" onClick={() => setMobileMenuOpen(false)}>
           <nav
-            className="bg-white w-3/4 max-w-xs h-full shadow-2xl flex flex-col p-8 gap-8 animate-fade-in-up"
+            className="w-3/4 max-w-xs h-full shadow-2xl flex flex-col p-8 gap-8 animate-fade-in-up bg-white/60 backdrop-blur-lg rounded-l-2xl border-l border-white/30"
             onClick={e => e.stopPropagation()}
           >
             <button
