@@ -1,6 +1,6 @@
 const MissionSection = () => {
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-50 to-white fade-in-section">
+    <section id="mission" className="section-padding bg-gradient-to-br from-primary-50 to-white fade-in-section">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="bubble-text-md gradient-text mb-6 transition-all duration-300 hover:scale-105 hover:text-primary-600 hover:drop-shadow-xl sparkle">Our Mission & Goals</h2>

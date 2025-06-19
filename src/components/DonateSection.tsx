@@ -27,7 +27,7 @@ const DonateSection = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-600 via-primary-500 to-sky-medium text-white fade-in-section">
+    <section id="donate" className="section-padding bg-gradient-to-br from-primary-600 via-primary-500 to-sky-medium text-white fade-in-section">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="bubble-text-md mb-6 text-white animate-fade-in-up sparkle" style={{textShadow: '0 2px 16px rgba(0,0,0,0.25)'}}>Support the Omar Fund</h2>
