@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white/80 backdrop-blur border-b border-primary-100 shadow-sm">
+    <header className="sticky top-0 z-30 w-full bg-white border-b border-primary-100 shadow-sm">
       <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-2 md:px-4 lg:px-8">
         {/* Logo/Brand */}
         <a href="#" className="flex items-center gap-2 text-2xl font-extrabold text-primary-600 tracking-tight">
