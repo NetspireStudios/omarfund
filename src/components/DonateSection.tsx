@@ -38,37 +38,28 @@ const DonateSection = () => {
         <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center justify-center">
           <div className="bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl card-3d w-full max-w-md text-center mb-6 md:mb-0">
             <h3 className="bubble-text-sm text-white mb-4">Where Your Money Goes</h3>
-            <div className="space-y-4 text-left">
+            <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <span>Direct Community Aid</span>
+                <span>Building Mosques</span>
                 <span className="font-bold">65%</span>
               </div>
               <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
                 <div className="bg-white h-2 rounded-full" style={{ width: '65%' }}></div>
               </div>
               <div className="flex justify-between items-center">
-                <span>Program Development</span>
+                <span>Program Development and Hosting</span>
                 <span className="font-bold">25%</span>
               </div>
               <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
                 <div className="bg-white h-2 rounded-full" style={{ width: '25%' }}></div>
               </div>
               <div className="flex justify-between items-center">
-                <span>Operations</span>
+                <span>Growth Operations</span>
                 <span className="font-bold">10%</span>
               </div>
               <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
                 <div className="bg-white h-2 rounded-full" style={{ width: '10%' }}></div>
               </div>
-            </div>
-            <div className="mt-8">
-              <h4 className="font-bold text-lg mb-3">Impact Examples</h4>
-              <ul className="space-y-2 text-sm">
-                <li>• $25 provides a family meal for a week</li>
-                <li>• $50 funds school supplies for a child</li>
-                <li>• $100 covers emergency assistance</li>
-                <li>• $250 sponsors a community event</li>
-              </ul>
             </div>
           </div>
           <div className="bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl card-3d w-full max-w-md text-center">

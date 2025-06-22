@@ -78,35 +78,26 @@ const MissionSection = () => {
               <ul className="space-y-3 text-section text-base">
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-3 mt-1">✓</span>
-                  Support 1,000 families with emergency assistance
+                  Raise up to $10,000 in overall donations this year
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-3 mt-1">✓</span>
-                  Launch 5 new community programs
+                  Host 4-5 different events
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-3 mt-1">✓</span>
-                  Raise $500,000 for local initiatives
+                  Gather new volunteers
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-3 mt-1">✓</span>
-                  Recruit 200 new volunteer advocates
+                  Complete construction of mosque
                 </li>
               </ul>
             </div>
 
-            <div className="bg-gradient-to-r from-primary-500 to-sky-medium p-6 rounded-2xl text-white card-3d scale-in animate-fade-in-up shadow-lg transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl">
-              <h4 className="font-bold text-lg mb-2">Impact This Year</h4>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold">847</div>
-                  <div className="text-sm opacity-90">Families Helped</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold">$425K</div>
-                  <div className="text-sm opacity-90">Funds Raised</div>
-                </div>
-              </div>
+            <div className="bg-gradient-to-r from-primary-500 to-sky-medium p-6 rounded-2xl text-white card-3d scale-in animate-fade-in-up shadow-lg transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl flex flex-col items-center justify-center">
+              <h4 className="font-bold text-lg mb-2">Funds Raised So Far</h4>
+              <div className="text-3xl font-bold">$12,500</div>
             </div>
           </div>
         </div>

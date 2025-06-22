@@ -3,28 +3,28 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 const EventsSection = () => {
   const events = [
     {
-      date: "June 2025",
-      title: "Community Fundraiser",
-      description: "A successful community fundraising event that brought people together for a great cause.",
+      date: "July 2024",
+      title: "Basketball Tournament",
+      description: "A thrilling basketball tournament that brought players and fans together for a great cause.",
       image: "/Images/event8.jpg",
+      type: "past",
+      raised: "Raised: $2,000"
+    },
+    {
+      date: "June 2025",
+      title: "Soccer Tournament",
+      description: "A day of friendly competition and community spirit on the soccer field.",
+      image: "/Images/event7.jpg",
       type: "past",
       raised: "Raised: $2,800"
     },
     {
-      date: "December 2024",
-      title: "Basketball Tournament",
-      description: "An exciting basketball tournament that showcased community spirit and athletic talent.",
-      image: "/Images/event7.jpg",
-      type: "past",
-      raised: "Raised: $1,130"
-    },
-    {
-      date: "January 2024",
-      title: "Dodgeball Tournament",
-      description: "A fun and competitive dodgeball tournament that brought teams together for friendly competition.",
+      date: "August 2023",
+      title: "Soccer Tournament",
+      description: "A fun and competitive soccer tournament that brought teams together for friendly competition.",
       image: "/Images/event3.jpg",
       type: "past",
-      raised: "Raised: $1,000"
+      raised: "Raised: $2,000"
     },
     {
       date: "August 2023",
