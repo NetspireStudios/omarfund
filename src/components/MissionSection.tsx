@@ -74,7 +74,7 @@ const MissionSection = () => {
 
           <div className="space-y-6">
             <div className="card-hover scale-in bg-white/90 rounded-2xl p-6 shadow-md border-2 border-transparent hover:border-primary-300 animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl">
-              <h3 className="bubble-text-sm text-primary-600 mb-4">2024 Goals</h3>
+              <h3 className="bubble-text-sm text-primary-600 mb-4">2025 Goals</h3>
               <ul className="space-y-3 text-section text-base">
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-3 mt-1">✓</span>
