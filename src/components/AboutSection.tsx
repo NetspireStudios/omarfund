@@ -5,19 +5,16 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="bubble-text-md gradient-text mb-6 transition-all duration-300 hover:scale-105 hover:text-primary-600 hover:drop-shadow-xl sparkle">About Us</h2>
           <p className="text-section max-w-3xl mx-auto transition-colors duration-300 hover:text-primary-600">
-            Founded with love and driven by compassion, Sky Blue Heart Stories began as a simple idea: 
-            every person deserves a chance to dream and every dream deserves a chance to come true.
+            The Omar Fund was created in memory of Omar El-Hassan — a kind, generous soul who left a lasting impact on everyone around him. We honour his legacy by hosting community events and sports tournaments to raise money for the Omar El-Hassan Medical Centre in Sudan, run by his father. Every event keeps Omar's spirit alive and turns remembrance into meaningful change.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
             <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
-              <h3 className="bubble-text-sm text-primary-600 mb-4 transition-colors duration-300 hover:text-primary-800">Our Beginning</h3>
+              <h3 className="bubble-text-sm text-primary-600 mb-4 transition-colors duration-300 hover:text-primary-800">Our History</h3>
               <p className="text-section transition-colors duration-300 hover:text-primary-600">
-                What started as weekend volunteer work has blossomed into a community movement. 
-                We believe in the power of small acts of kindness to create ripples of positive change 
-                that touch countless lives.
+                Since 2023, The Omar Fund has grown from a memorial initiative into a grassroots movement built on community and compassion. Over the past two years, we've hosted soccer, basketball, and dodgeball tournaments, along with BBQs, community events, and fundraisers — all to honour the legacy of Omar El-Hassan.
               </p>
               <img 
                 src="/Images/Omar1.webp"
@@ -27,11 +24,9 @@ const AboutSection = () => {
             </div>
 
             <div className="card-hover scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
-              <h3 className="bubble-text-sm text-primary-600 mb-4 transition-colors duration-300 hover:text-primary-800">Our Community</h3>
+              <h3 className="bubble-text-sm text-primary-600 mb-4 transition-colors duration-300 hover:text-primary-800">Our Impact</h3>
               <p className="text-section transition-colors duration-300 hover:text-primary-600">
-                With over 500 volunteers and thousands of supporters, we've become a family united 
-                by our shared belief that together, we can make the world a little brighter, 
-                one story at a time.
+                We've raised thousands for the Omar El-Hassan Medical Centre in Sudan and launched emergency campaigns for Gaza. Every event brings people together to give back and carry Omar's spirit forward through meaningful action.
               </p>
               <img 
                 src="/Images/omar2.webp"

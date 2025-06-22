@@ -5,39 +5,44 @@ const MissionSection = () => {
         <div className="text-center mb-16">
           <h2 className="bubble-text-md gradient-text mb-6 transition-all duration-300 hover:scale-105 hover:text-primary-600 hover:drop-shadow-xl sparkle">Our Mission & Goals</h2>
           <p className="text-section max-w-3xl mx-auto">
-            We're on a mission to transform lives through compassionate action, 
-            innovative fundraising, and the power of community connection.
+            The Omar Fund exists to turn the memory of one life into lasting impact. While many never had the chance to meet Omar El-Hassan, his story reflects something universal — the power of kindness, loyalty, and community.
+          </p>
+          <p className="text-section max-w-3xl mx-auto mt-4">
+            Our mission is to continue that legacy by supporting the Omar El-Hassan Medical Centre in Sudan, sponsoring orphans in the future, and raising funds for urgent causes around the world. Through sports tournaments, fundraisers, and community events, we turn grief into action — and invite others to join us in building something bigger than ourselves.
+          </p>
+          <p className="text-section max-w-3xl mx-auto mt-4 font-semibold text-primary-600">
+            You don't have to know Omar to be part of what he inspired.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-16">
           <div className="card-hover unreal-3d psy-glow scale-in animate-fade-in-up transition-transform duration-500 ease-out bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mb-6 flex items-center justify-center shadow-lg shimmer">
-              <span className="text-3xl">💙</span>
+              <span className="text-3xl">🏥</span>
             </div>
-            <h3 className="bubble-text-sm text-primary-600 mb-3">Empower Dreams</h3>
+            <h3 className="bubble-text-sm text-primary-600 mb-3">Support Medical Centre</h3>
             <p className="text-section text-base">
-              Provide resources and support to help individuals and families achieve their goals and overcome challenges.
+              Raise funds and provide support for the Omar El-Hassan Medical Centre in Sudan, ensuring quality healthcare for those in need.
             </p>
           </div>
 
           <div className="card-hover unreal-3d psy-glow scale-in animate-fade-in-up transition-transform duration-500 ease-out bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-sky-light to-primary-500 rounded-full mb-6 flex items-center justify-center shadow-lg shimmer">
-              <span className="text-3xl">🌟</span>
+              <span className="text-3xl">👶</span>
             </div>
-            <h3 className="bubble-text-sm text-primary-600 mb-3">Build Community</h3>
+            <h3 className="bubble-text-sm text-primary-600 mb-3">Sponsor Orphans</h3>
             <p className="text-section text-base">
-              Foster connections and create lasting relationships that strengthen our community fabric.
+              Provide care, education, and support for orphaned children, giving them hope and opportunities for a better future.
             </p>
           </div>
 
           <div className="card-hover unreal-3d psy-glow scale-in animate-fade-in-up transition-transform duration-500 ease-out bg-white/80 rounded-2xl p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-primary-300 to-sky-medium rounded-full mb-6 flex items-center justify-center shadow-lg shimmer">
-              <span className="text-3xl">🚀</span>
+              <span className="text-3xl">🌍</span>
             </div>
-            <h3 className="bubble-text-sm text-primary-600 mb-3">Create Impact</h3>
+            <h3 className="bubble-text-sm text-primary-600 mb-3">Global Aid</h3>
             <p className="text-section text-base">
-              Generate measurable, positive change that extends far beyond our immediate community.
+              Raise funds for urgent causes around the world, responding to crises and supporting communities in need.
             </p>
           </div>
         </div>

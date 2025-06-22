@@ -3,68 +3,52 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 const EventsSection = () => {
   const events = [
     {
-      date: "July 2024",
-      title: "Basketball Shootout",
-      description: "A thrilling basketball shootout event at Underpass Toronto, bringing together players and fans.",
+      date: "June 2025",
+      title: "Community Fundraiser",
+      description: "A successful community fundraising event that brought people together for a great cause.",
       image: "/Images/event8.jpg",
       type: "past",
-      raised: "Raised: $4,000"
+      raised: "Raised: $2,800"
     },
     {
-      date: "June 2024",
-      title: "Soccer Tournament",
-      description: "A day of friendly competition and community spirit on the soccer field.",
+      date: "December 2024",
+      title: "Basketball Tournament",
+      description: "An exciting basketball tournament that showcased community spirit and athletic talent.",
       image: "/Images/event7.jpg",
       type: "past",
-      raised: "Raised: $5,000"
-    },
-    {
-      date: "May 2024",
-      title: "Team Celebration",
-      description: "Celebrating our volunteers and their achievements after a successful event.",
-      image: "/Images/event3.jpg",
-      type: "past",
-      raised: "Raised: $2,500"
-    },
-    {
-      date: "April 2024",
-      title: "Basketball Fundraiser",
-      description: "A basketball tournament to raise funds and bring the community together.",
-      image: "/Images/event2.jpg",
-      type: "past",
-      raised: "Raised: $3,000"
-    },
-    {
-      date: "March 2024",
-      title: "Spring Picnic",
-      description: "A picnic event with food, games, and fun for all ages.",
-      image: "/Images/event 6.jpg",
-      type: "past",
-      raised: "Raised: $1,800"
-    },
-    {
-      date: "February 2024",
-      title: "Community Gathering",
-      description: "Bringing people together for a day of food, conversation, and connection.",
-      image: "/Images/event 5.jpg",
-      type: "past",
-      raised: "Raised: $2,200"
+      raised: "Raised: $1,130"
     },
     {
       date: "January 2024",
-      title: "Winter Soccer Match",
-      description: "A winter soccer match to kick off the new year with energy and excitement.",
-      image: "/Images/Event9.jpg",
+      title: "Dodgeball Tournament",
+      description: "A fun and competitive dodgeball tournament that brought teams together for friendly competition.",
+      image: "/Images/event3.jpg",
       type: "past",
-      raised: "Raised: $2,700"
+      raised: "Raised: $1,000"
     },
     {
-      date: "December 2023",
-      title: "Holiday Event",
-      description: "A festive event to celebrate the holidays and support our cause.",
-      image: "/Images/event 4.jpg",
+      date: "August 2023",
+      title: "Basketball Tournament",
+      description: "A basketball tournament that raised significant funds while promoting community engagement.",
+      image: "/Images/event2.jpg",
       type: "past",
-      raised: "Raised: $3,500"
+      raised: "Raised: $2,000"
+    },
+    {
+      date: "July 2023",
+      title: "BBQ Event",
+      description: "A delicious BBQ event that combined great food with community fundraising.",
+      image: "/Images/event 6.jpg",
+      type: "past",
+      raised: "Raised: $1,400"
+    },
+    {
+      date: "June 2023",
+      title: "Community Fundraiser",
+      description: "A community fundraising event that marked the beginning of our fundraising journey.",
+      image: "/Images/event 5.jpg",
+      type: "past",
+      raised: "Raised: $2,000"
     }
   ];
 
