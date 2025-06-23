@@ -93,14 +93,14 @@ const MissionSection = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-3 mt-1">✓</span>
-                  Complete construction of mosque
+                  Complete development of medical center
                 </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-r from-primary-500 to-sky-medium p-6 rounded-2xl text-white card-3d scale-in animate-fade-in-up shadow-lg transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl flex flex-col items-center justify-center">
               <h4 className="font-bold text-lg mb-2">Funds Raised So Far</h4>
-              <div className="text-3xl font-bold">$12,500</div>
+              <div className="text-3xl font-bold">$9,000</div>
             </div>
           </div>
         </div>
