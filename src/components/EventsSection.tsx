@@ -43,7 +43,7 @@ const EventsSection = () => {
       raised: "Raised: $1,400"
     },
     {
-      date: " 2023",
+      date: " 2025",
       title: "Community Fundraiser",
       description: "A community fundraising event that marked the beginning of our fundraising journey.",
       image: "/Images/event 5.jpg",
