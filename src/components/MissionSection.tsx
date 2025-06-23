@@ -10,6 +10,9 @@ const MissionSection = () => {
           <p className="text-section max-w-3xl mx-auto mt-4">
             Our mission is to continue that legacy by supporting the Omar El-Hassan Medical Centre in Sudan, sponsoring orphans in the future, and raising funds for urgent causes around the world. Through sports tournaments, fundraisers, and community events, we turn grief into action — and invite others to join us in building something bigger than ourselves.
           </p>
+          <p className="text-section max-w-3xl mx-auto mt-4">
+            <strong>Upcoming Project:</strong> We are excited to launch our Global Aid initiative, which will support urgent causes and communities in need around the world. Stay tuned for more details!
+          </p>
           <p className="text-section max-w-3xl mx-auto mt-4 font-semibold text-primary-600">
             You don't have to know Omar to be part of what he inspired.
           </p>
@@ -63,11 +66,11 @@ const MissionSection = () => {
             <div className="card-3d glass-card rounded-2xl overflow-hidden scale-in animate-fade-in-up transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:border-primary-300 border-2 border-transparent">
               <img 
                 src="/Images/mission1.jpg"
-                alt="Mission project photo 2"
+                alt="Upcoming Global Aid Project"
                 className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105 hover:brightness-105"
               />
               <div className="p-4">
-                <p className="text-sm text-gray-600 font-medium">Mission Project 2</p>
+                <p className="text-sm text-gray-600 font-medium"><strong>Upcoming Project:</strong> Global Aid – Supporting urgent causes and communities in need worldwide.</p>
               </div>
             </div>
           </div>

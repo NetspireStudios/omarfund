@@ -30,7 +30,7 @@ const EventsSection = () => {
       date: "August 2023",
       title: "Basketball Tournament",
       description: "A basketball tournament that raised significant funds while promoting community engagement.",
-      image: "/Images/event2.jpg",
+      image: "/Images/fundraisers.jpg",
       type: "past",
       raised: "Raised: $2,000"
     },
@@ -49,6 +49,14 @@ const EventsSection = () => {
       image: "/Images/event 5.jpg",
       type: "past",
       raised: "Raised: $2,000"
+    },
+    {
+      date: "May 2023",
+      title: "Bake Sale for Palestine",
+      description: "A heartfelt bake sale fundraiser to support urgent relief efforts for Palestine.",
+      image: "/Images/bakesale-palestine.jpg",
+      type: "past",
+      raised: "Raised: $1,000"
     }
   ];
 
@@ -61,13 +69,13 @@ const EventsSection = () => {
             From heartwarming galas to community marathons, our events bring people together to create positive change and unforgettable memories.
           </p>
         </div>
-        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-primary-200 scrollbar-track-primary-50">
-          <Carousel className="w-full max-w-full sm:max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'start', loop: true }}>
+        <div className="scrollbar-thin scrollbar-thumb-primary-200 scrollbar-track-primary-50">
+          <Carousel className="w-full max-w-full sm:max-w-4xl mx-auto" opts={{ slidesToScroll: 1, align: 'center', loop: true }}>
             <CarouselPrevious />
             <CarouselContent className="flex">
               {events.map((event, index) => (
-                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 min-w-[90vw] sm:min-w-[320px] max-w-full sm:max-w-[400px] animate-fade-in-up transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:border-primary-300">
-                  <div className={`rounded-2xl shadow-xl border-2 border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100 p-4 sm:p-6 flex flex-col items-center text-center hover:shadow-2xl hover:border-primary-400 transition-all duration-300`}>
+                <CarouselItem key={index} className="w-full max-w-xs mx-auto sm:pl-4 sm:basis-1/2 sm:min-w-[320px] max-w-full sm:max-w-[400px] animate-fade-in-up transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl hover:border-primary-300">
+                  <div className={`rounded-xl sm:rounded-2xl shadow-xl border-2 sm:border-4 border-primary-300 bg-gradient-to-br from-primary-50 to-sky-100 p-4 sm:p-6 flex flex-col items-center text-center hover:shadow-2xl hover:border-primary-400 transition-all duration-300`}>
                     <img src={event.image} alt={event.title} className="w-full h-32 sm:h-40 object-cover rounded-xl mb-3 sm:mb-4 transition-transform duration-300 hover:scale-105" />
                     <div className="mb-1 sm:mb-2 text-primary-600 font-bold text-xs sm:text-sm">{event.date}</div>
                     <h3 className="bubble-text-sm mb-1 sm:mb-2">{event.title}</h3>
