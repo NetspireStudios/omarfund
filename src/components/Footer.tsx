@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           <div>
-            <h3 className="bubble-text-sm text-white mb-6">Sky Blue Heart Stories</h3>
+            <h3 className="bubble-text-sm text-white mb-6">The Omar Fund</h3>
             <p className="text-gray-300 leading-relaxed mb-4">
               Creating positive change through compassion, community, and the power of shared stories.
             </p>

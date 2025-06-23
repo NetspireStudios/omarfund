@@ -59,7 +59,7 @@ const MissionSection = () => {
                 className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105 hover:brightness-105"
               />
               <div className="p-4">
-                <p className="text-sm text-gray-600 font-medium">Mission Project 1</p>
+                <p className="text-sm text-gray-600 font-medium"><strong>Project:</strong> Omar Elhassan Medical Center Abdoun Gazira Sudan</p>
               </div>
             </div>
 

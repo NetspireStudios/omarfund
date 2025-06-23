@@ -31,8 +31,8 @@ const Header = () => {
     <header className="sticky top-0 z-30 w-full bg-white border-b border-primary-100 shadow-sm">
       <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-2 md:px-4 lg:px-8">
         {/* Logo/Brand */}
-        <a href="#" className="flex items-center text-2xl font-extrabold text-primary-600 tracking-tight" style={{ height: '110px', overflow: 'hidden' }}>
-          <img src="/Images/logo.png" alt="Omar Fund Logo" className="h-44 w-auto object-contain mx-auto" style={{ display: 'block', marginTop: '-48px', marginBottom: '-48px' }} />
+        <a href="#" className="flex items-center text-2xl font-extrabold text-primary-600 tracking-tight" style={{ height: '80px', overflow: 'hidden' }}>
+          <img src="/Images/logo.png" alt="Omar Fund Logo" className="h-28 w-auto object-contain mx-auto" style={{ display: 'block', marginTop: '-32px', marginBottom: '-32px' }} />
         </a>
         {/* Navigation */}
         <nav className="hidden md:flex gap-8 text-base font-medium">
