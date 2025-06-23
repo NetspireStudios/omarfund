@@ -41,10 +41,10 @@ const Header = () => {
           <a href="#events" className="hover:text-primary-500 transition-colors">Events</a>
           <a href="#donate" className="hover:text-primary-500 transition-colors">Donate</a>
         </nav>
-        {/* Donate Button with Dialog */}
+        {/* Donate Button with Dialog - HIDDEN ON MOBILE */}
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button className="ml-4 inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white font-semibold shadow hover:scale-105 hover:shadow-lg transition-all duration-200">
+            <button className="hidden md:inline-flex ml-4 items-center px-6 py-2 rounded-full bg-gradient-to-r from-primary-500 to-sky-400 text-white font-semibold shadow hover:scale-105 hover:shadow-lg transition-all duration-200">
               Donate
             </button>
           </DialogTrigger>
@@ -133,7 +133,7 @@ const Header = () => {
               <a href="#about" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>About</a>
               <a href="#mission" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>Mission</a>
               <a href="#events" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>Events</a>
-              <a href="#donate" className="my-2 mx-4 text-lg font-semibold text-primary-700 bg-white rounded-full shadow transition-all px-8 py-3 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700" onClick={() => setMobileMenuOpen(false)}>Donate</a>
+              <a href="#donate" className="my-2 mx-4 text-lg font-semibold text-white bg-gradient-to-r from-primary-500 to-primary-600 rounded-full shadow-lg transition-all px-8 py-3 hover:from-primary-600 hover:to-primary-700 hover:shadow-xl focus:from-primary-600 focus:to-primary-700" onClick={() => setMobileMenuOpen(false)}>Donate</a>
             </div>
           </nav>
         </div>
