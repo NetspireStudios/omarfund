@@ -3,7 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 const EventsSection = () => {
   const events = [
     {
-      date: "July 2024",
+      date: " 2024",
       title: "Basketball Tournament",
       description: "A thrilling basketball tournament that brought players and fans together for a great cause.",
       image: "/Images/event8.jpg",
@@ -11,7 +11,7 @@ const EventsSection = () => {
       raised: "Raised: $2,000"
     },
     {
-      date: "June 2025",
+      date: " 2025",
       title: "Soccer Tournament",
       description: "A day of friendly competition and community spirit on the soccer field.",
       image: "/Images/event7.jpg",
@@ -19,7 +19,7 @@ const EventsSection = () => {
       raised: "Raised: $2,800"
     },
     {
-      date: "August 2023",
+      date: "2023",
       title: "Soccer Tournament",
       description: "A fun and competitive soccer tournament that brought teams together for friendly competition.",
       image: "/Images/event3.jpg",
@@ -27,7 +27,7 @@ const EventsSection = () => {
       raised: "Raised: $2,000"
     },
     {
-      date: "August 2023",
+      date: "2023",
       title: "Basketball Tournament",
       description: "A basketball tournament that raised significant funds while promoting community engagement.",
       image: "/Images/fundraisers.jpg",
@@ -35,7 +35,7 @@ const EventsSection = () => {
       raised: "Raised: $2,000"
     },
     {
-      date: "July 2023",
+      date: "2023",
       title: "BBQ Event",
       description: "A delicious BBQ event that combined great food with community fundraising.",
       image: "/Images/event 6.jpg",
@@ -43,7 +43,7 @@ const EventsSection = () => {
       raised: "Raised: $1,400"
     },
     {
-      date: "June 2023",
+      date: " 2023",
       title: "Community Fundraiser",
       description: "A community fundraising event that marked the beginning of our fundraising journey.",
       image: "/Images/event 5.jpg",
@@ -51,7 +51,7 @@ const EventsSection = () => {
       raised: "Raised: $2,000"
     },
     {
-      date: "May 2023",
+      date: "2023",
       title: "Bake Sale for Palestine",
       description: "A heartfelt bake sale fundraiser to support urgent relief efforts for Palestine.",
       image: "/Images/bakesale-palestine.jpg",

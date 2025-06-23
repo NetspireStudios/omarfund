@@ -40,21 +40,21 @@ const DonateSection = () => {
             <h3 className="bubble-text-sm text-white mb-4">Where Your Money Goes</h3>
             <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <span>Building Mosques</span>
+                <span>Global health operations and aid</span>
                 <span className="font-bold">65%</span>
               </div>
               <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
                 <div className="bg-white h-2 rounded-full" style={{ width: '65%' }}></div>
               </div>
               <div className="flex justify-between items-center">
-                <span>Program Development and Hosting</span>
+                <span>Program Development and hosting</span>
                 <span className="font-bold">25%</span>
               </div>
               <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
                 <div className="bg-white h-2 rounded-full" style={{ width: '25%' }}></div>
               </div>
               <div className="flex justify-between items-center">
-                <span>Growth Operations</span>
+                <span>Fuelling Long term goals (growth operations)</span>
                 <span className="font-bold">10%</span>
               </div>
               <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
